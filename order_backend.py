@@ -22,4 +22,4 @@ for order in range(1, ORDER_LIMIT):
         ORDER_KAFKA_TOPIC, json.dumps(data).encode("utf-8")
     )
     print(f'Done sending....{order}')
-    time.sleep(10)
+    time.sleep(5)
