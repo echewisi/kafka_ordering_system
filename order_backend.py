@@ -1,6 +1,10 @@
 import json
 import time
-from kafka import KafkaProducer, KafkaConsumer, KafkaClient
+from kafka import KafkaProducer
+
+"""
+in the order_backend the data sent by the producer to a certain topic holds the order_data endpoints.
+the data sent is to be consumed by a consumer that will read the topic and get the data from the consumer"""
 
 
 ORDER_KAFKA_TOPIC= "order_details"

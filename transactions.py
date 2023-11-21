@@ -3,7 +3,10 @@ from kafka import KafkaConsumer, KafkaProducer
 
 ORDER_KAFKA_TOPIC= "order_details"
 ORDER_CONFIRMED_KAFKA_TOPIC= "order_confirmed"
-
+"""
+qhat the trasnactions.py file does is it receives a particular order detail from the kafka producer, reads it
+from the topic, decodes it, and sends back the required data points to a producer, writing to a new topic that confirms 
+orders"""
 consumer= KafkaConsumer(
     ORDER_KAFKA_TOPIC,
     bootstrap_servers= "localhost:29092"
