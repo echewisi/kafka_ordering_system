@@ -32,6 +32,7 @@ while True:
         }
         
         print("successful transaction...")
+        
         producer.send(
             ORDER_CONFIRMED_KAFKA_TOPIC, json.dumps(data).encode("utf-8")
         )

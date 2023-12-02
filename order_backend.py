@@ -8,7 +8,7 @@ the data sent is to be consumed by a consumer that will read the topic and get t
 
 
 ORDER_KAFKA_TOPIC= "order_details"
-ORDER_LIMIT= 15
+ORDER_LIMIT= 20000
 
 producer= KafkaProducer(bootstrap_servers="localhost:29092")
 print("going to generate order after ten seconds")
@@ -26,4 +26,4 @@ for order in range(1, ORDER_LIMIT):
         ORDER_KAFKA_TOPIC, json.dumps(data).encode("utf-8")
     )
     print(f'Done sending....{order}')
-    time.sleep(5)
+    time.sleep(2)
